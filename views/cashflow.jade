@@ -1,0 +1,160 @@
+doctype html
+html.
+	<head>
+		<link rel="stylesheet" href="/stylesheets/bootstrap-material-datetimepicker.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+		<script src="/javascripts/moment/moment.js"></script>
+		<script src="/javascripts/bootstrap-material-datetimepicker-gh-pages/js/bootstrap-material-datetimepicker.js"></script>
+		<script>
+			var config = {
+			  apiKey: "AIzaSyBAut1TR00IbtLgG40mhn68edl5LNkSTJc",
+			  authDomain: "fellowshipofthebank.firebaseapp.com",
+			  databaseURL: "https://fellowshipofthebank.firebaseio.com",
+			  storageBucket: "fellowshipofthebank.appspot.com",
+			  messagingSenderId: "20840712965"
+			};
+			firebase.initializeApp(config);
+		</script>
+		<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+		<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-yellow.min.css">
+		<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+	</head>
+	<body>
+		<!-- Always shows a header, even in smaller screens. -->
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		  <header class="mdl-layout__header" style="background-color: #006ac3">
+		    <div class="mdl-layout__header-row" >
+		      <span class="mdl-layout-title">
+						<img src="/images/Logo Version 2 (with dot).png" style="height: 60px"/>
+					</span>
+		      <!-- Add spacer, to align navigation to the right -->
+		      <div class="mdl-layout-spacer"></div>
+		      <!-- Navigation. We hide it in small screens. -->
+		      <nav class="mdl-navigation mdl-layout--large-screen-only">
+						<a class="mdl-navigation__link" href="cashflow"><i class="material-icons">add</i>New Transaction</a>
+		        <a class="mdl-navigation__link" href="dashboard">Dashboard</a>
+		        <a class="mdl-navigation__link" href="marketing">Marketing</a>
+		        <a class="mdl-navigation__link" href="discover">Discover</a>
+		      </nav>
+		    </div>
+		  </header>
+		  <div class="mdl-layout__drawer">
+		    <span id="aboutYou1" class="mdl-layout-title"><img src="/images/user.jpg"/></span>
+				<span id="aboutYou2" class="mdl-layout-title"><h3 id="clientInfoNav"></h3></span>
+		    <nav class="mdl-navigation">
+				  <a class="mdl-navigation__link" href="cashflow"><i class="material-icons">add</i> New Transaction</a>
+		      <a class="mdl-navigation__link" href="dashboard">Dashboard</a>
+		      <a class="mdl-navigation__link" href="marketing">Marketing</a>
+		      <a class="mdl-navigation__link" href="discover">Discover</a>
+		    </nav>
+		  </div>
+		  <main class="mdl-layout__content login-background">
+				<style>
+					.demo-card-wide.mdl-card {
+					  width: 100%;
+					}
+					.demo-card-wide > .mdl-card__title1 {
+					  height: 50px;
+						padding: 10px;
+					  background: url('/images/monet1.png') center / cover;
+					}
+					.demo-card-wide > .mdl-card__title2 {
+					  height: 50px;
+						padding: 10px;
+					  background: url('/images/monet3.png') center / cover;
+					}
+					.demo-card-wide > .mdl-card__title3 {
+					  height: 50px;
+						padding: 10px;
+					  background: url('/images/seurat1.png') center / cover;
+					}
+					.demo-card-wide > .mdl-card__title4 {
+					  height: 50px;
+						padding: 10px;
+					  background: url('/images/monet2.png') center / cover;
+					}
+					
+					h4 {
+						color: #fff;
+					}
+					
+					.demo-card-wide > .mdl-card__menu {
+					  color: #fff;
+					}
+				</style>
+		    <div class="page-content">
+					<div class="mdl-grid">
+						<div class="mdl-cell mdl-cell--3-col"></div>
+						<div class="mdl-cell mdl-cell--6-col">
+							<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+								<div class="mdl-card__title4 mdl-card--border">
+								 <h4>Manual Transaction Input</h4>
+								</div>
+								<div class="mdl-card__supporting-text">
+									<form action="#">
+									  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+										  <input type="radio" id="option-1" class="mdl-radio__button" name="options1" value="1" checked>
+										  <span class="mdl-radio__label">Cash In</span>
+										</label>
+										<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+										  <input type="radio" id="option-2" class="mdl-radio__button" name="options1" value="2">
+										  <span class="mdl-radio__label">Cash Out</span>
+										</label>
+									</form>
+									<form action="#">
+									  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									    <input class="mdl-textfield__input" type="text" id="date1">
+									    <label class="mdl-textfield__label" for="date1">Date Due</label>
+										</div>
+									</form>
+									<form action="#">
+									  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+											<input class="mdl-textfield__input" type="currency" id="details1">
+									    <label class="mdl-textfield__label" for="details1">Details</label>
+										</div>
+									</form>
+									<form action="#">
+									  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+											<input class="mdl-textfield__input" type="number" id="amount1">
+									    <label class="mdl-textfield__label" for="amount1">Amount</label>
+										</div>
+									</form>
+									<form action="#">
+									  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+											<input class="mdl-textfield__input" type="text" id="notes1">
+									    <label class="mdl-textfield__label" for="notes1">Notes</label>
+									  </div>
+									</form>
+									<form action="#">
+										<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+										  <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
+										  <span class="mdl-checkbox__label">Check this box if the amount will be payed at a later date</span>
+										</label>
+									</form>
+									<br/>
+									<button onClick="submitTransaction()" class="mdl-button mdl-js-button mdl-button--raised">Submit</Button>
+									<button onClick="importTransactions()" class="mdl-button mdl-js-button mdl-button--raised">Import From RBC Account</Button>
+								</div>
+							</div>
+						</div>
+						<div class="mdl-cell mdl-cell--3-col"></div>
+					</div>
+				</div>
+				<div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+				  <div class="mdl-snackbar__text"></div>
+				  <button class="mdl-snackbar__action" type="button"></button>
+				</div>
+				<dialog id="dialog" class="mdl-dialog">
+				  <h3 class="mdl-dialog__title">Success</h3>
+				  <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
+				    <button type="button" onClick="clearForm()" class="mdl-button">Add another</button>
+				    <button type="button" onClick="goToDashboard()" class="mdl-button">Dashboard</button>
+				  </div>
+				</dialog>
+		  </main>
+		</div>
+		<script src="/javascripts/indexScript.js"></script>
+		<script src="/javascripts/datePicker.js"></script>
+	</body>

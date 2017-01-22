@@ -1,0 +1,65 @@
+doctype html
+html.
+	<head>
+		<link rel="stylesheet" href="/stylesheets/bootstrap-material-datetimepicker.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+		<script src="/javascripts/moment/moment.js"></script>
+		<script src="/javascripts/bootstrap-material-datetimepicker-gh-pages/js/bootstrap-material-datetimepicker.js"></script>
+		<script>
+			var config = {
+			  apiKey: "AIzaSyBAut1TR00IbtLgG40mhn68edl5LNkSTJc",
+			  authDomain: "fellowshipofthebank.firebaseapp.com",
+			  databaseURL: "https://fellowshipofthebank.firebaseio.com",
+			  storageBucket: "fellowshipofthebank.appspot.com",
+			  messagingSenderId: "20840712965"
+			};
+			firebase.initializeApp(config);
+		</script>
+		<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+		<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-yellow.min.css">
+		<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+	</head>
+	<body>
+		<!-- Always shows a header, even in smaller screens. -->
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		  <header class="mdl-layout__header" style="background-color: #006ac3">
+		    <div class="mdl-layout__header-row" >
+		      <span class="mdl-layout-title">
+						<img src="/images/Logo Version 2 (with dot).png" style="height: 60px"/>
+					</span>
+		      <!-- Add spacer, to align navigation to the right -->
+		      <div class="mdl-layout-spacer"></div>
+		      <!-- Navigation. We hide it in small screens. -->
+		      <nav class="mdl-navigation mdl-layout--large-screen-only">
+						<a class="mdl-navigation__link" href="cashflow"><i class="material-icons">add</i>New Transaction</a>
+		        <a class="mdl-navigation__link" href="dashboard">Dashboard</a>
+		        <a class="mdl-navigation__link" href="marketing">Marketing</a>
+		        <a class="mdl-navigation__link" href="discover">Discover</a>
+		      </nav>
+		    </div>
+		  </header>
+		  <div class="mdl-layout__drawer">
+		    <span id="aboutYou1" class="mdl-layout-title"><img src="/images/user.jpg"/></span>
+				<span id="aboutYou2" class="mdl-layout-title"><h3 id="clientInfoNav"></h3></span>
+		    <nav class="mdl-navigation">
+				  <a class="mdl-navigation__link" href="cashflow"><i class="material-icons">add</i> New Transaction</a>
+		      <a class="mdl-navigation__link" href="dashboard">Dashboard</a>
+		      <a class="mdl-navigation__link" href="marketing">Marketing</a>
+		      <a class="mdl-navigation__link" href="discover">Discover</a>
+		    </nav>
+				<style>
+					.theMap {
+						height: 100%;
+						width: 100%
+					}
+				</style>
+		  </div>
+		  <main class="mdl-layout__content">
+				<img src="/images/Screen Shot 2016-09-25 at 8.16.13 AM.png" class="theMap"/>
+		  </main>
+		</div>
+		<script src="/javascripts/indexScript.js"></script>
+		<script src="/javascripts/datePicker.js"></script>
+	</body>

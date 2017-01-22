@@ -1,0 +1,28 @@
+
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+.login-background {
+  background: url("https://ajutrasartandphoto.files.wordpress.com/2014/12/starry.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.centered {
+
+}
+
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url("https://ajutrasartandphoto.files.wordpress.com/2014/12/starry.jpg") center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
